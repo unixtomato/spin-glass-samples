@@ -4,4 +4,6 @@ There are some parameters to specify as input, e.g., [--input-width 8 --k0 1 --k
 
 Specify [--data-folder] for the directory of the generated samples.
 
-The algorithm is single-spin flip Metropolis on random plus-minus-one couplings.
+The algorithm is single-spin flip Metropolis on random plus-minus-one couplings. Since the effective Hamiltonian is a nonrandom model, one can do MCRG on it, or NMCRG variant [Phys. Rev. Research 3, 023230 (2020)].
+
+[susceptibility.png] is the spin-glass susceptibility obtained the generated samples; note that in low temperature our samples do not match well with FIG. 1 of [Phys. Rev. B 38, 4840 (1988)]. [ferromagnetic.png] is the (majority-rule MCRG) magnetic critical exponent from sample of non-randomized configurations (set both coupling in src/metro_replica.cpp:randomize_coupling to be 1); it doesn't match FIG. 1 in [Phys. Rev. B 37, 7745 (1988)] well in low temperature.
