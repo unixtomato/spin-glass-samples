@@ -1,0 +1,7 @@
+The codes generate spin-glass-replica samples for the effective Hamiltonian. See [Phys. Rev. Lett. 55, 2606 (1985)], [Phys. Rev. B 38, 4840 (1988)] FIG. 1 in particular, and [Phys. Rev. B 37, 7745 (1988)].
+
+There are some parameters to specify as input, e.g., [--input-width 8 --k0 1 --k1 0 --equil 4 --qunch 4 --nconf 1 --decor 1]. [--input-width] means the side length of the 2d sping glass; [--k0] integral part, and [--k1] decimal part, jointly specify the (effective inverse) temperature = k0+k1/100; [--equil] specifies the equilibration time 10**equil for each reailization; [--quench] specifies the number of realization, e.g. 30 in [Phys. Rev. Lett. 43, 1615 (1979)]; [--nconf] is the number of configurations generated for each realization; [--decor] is the decorrelation time in unit of sweep.
+
+Specify [--data-folder] for the directory of the generated samples.
+
+The algorithm is single-spin flip Metropolis on random plus-minus-one couplings.
